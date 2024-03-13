@@ -161,7 +161,7 @@ podman image pull {{ registry-host }}/{{ os-images-path }}/alpine:3.14
 podman system df
 ````
 
-- Сценарий "Как запустить контейнер в поде и в нём образ, а затем остановить контейнер?"
+- Сценарий "Как создать контейнер с именем и запустить его, а затем остановить контейнер?"
 ```shell
 podman container run hello
 
