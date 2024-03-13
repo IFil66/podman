@@ -170,7 +170,7 @@ podman container run --name demo -it {{ registry-host }}/{{ os-images-path }}/al
 /# exit 
 ```
 
-- Сценарий "Как проверить состояние контейнера и удалить его?"
+- Сценарий "Как узнать какие контейнеры есть и удалить конкретный контейнер?"
 ```shell
 podman container ls [--all]
 podman container rm demo
