@@ -373,8 +373,8 @@ Then участники делятся проблемами и отвечают 
 - `podman container rm`
 
 - [ ] Запуск контейнера в интерактивном и фоновом режимах: 
-- `-i` vs `-d`
-- `-t`
+- `-i`(интерактивный - можно взаимодействовать через командную строку) vs `-d`(фоновый)
+- `-t`(для интерактивного режима, чтобы можно было взаимодействовать через командную строку и вывод получать в консоль)
 
 - [ ] [Жизненный цикл пода](https://developers.redhat.com/blog/2019/01/15/podman-managing-containers-pods?intcmp=701f20000012ngPAAQ#)
 - `podman pod create` & `podman container run --pod [new:]`
@@ -420,6 +420,8 @@ podman container attach --sig-proxy=false proxy # otherwise detach key `ctrl-c` 
 podman container top proxy
 
 podman container exec -it proxy /bin/sh # run additional process `sh` within _running_ container
+# (запускает в работающем контейнере параллельно работающему приложению shell, через который можно
+# мониторить ситуацию в контейнере)
 ```
 
 - Сценарий "Как посмотреть свойства контейнера?"
