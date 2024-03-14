@@ -357,7 +357,9 @@ Then участники делятся проблемами и отвечают 
 - command line (image `entrypoint` override)
 - command line arguments (image `cmd` override)
 
-- [ ] Экстернализация конфигурации приложения
+- [ ] Экстернализация конфигурации приложения (передача данных снаружи для программы внутри контейнера 2 варианта: 
+     1 - через переменные 
+     2 - через ключи в команде при запуске контейнера)
 - Задачи экстернализации конфигурации приложения
 - Способы: `--env` и аргументы командной строки
 
@@ -365,8 +367,9 @@ Then участники делятся проблемами и отвечают 
 - `podman container create` + `podman container start` = `podman container run` `[args]`
 - `podman container commit`
 - `podman container ls [--all]`
-- `podman container logs`
-- `podman container stop` & `podman container kill`
+- `podman container logs`- выводит логи не запущенной в контейнере программы, а которые сам контейнер выводит в 
+  консоль
+- `podman container stop` & `podman container kill`(жёсткий останов программы: kill -9)
 - `podman container rm`
 
 - [ ] Запуск контейнера в интерактивном и фоновом режимах: 
